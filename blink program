@@ -1,7 +1,7 @@
 /*
   Blink
-the goal of this program is to make an LED turn on for 1second and turn off for one second repeatedy
-by setting the LED pin as pin 13 
+The program's objective is making an LED turn on for a second and turn off for a second repeatedly. 
+Pin 13 is set as the LED pin. 
 */
 
 // the setup function runs once when you press reset or power the board
