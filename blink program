@@ -1,5 +1,4 @@
-/*
-  Blink
+/*Blink
 The program's objective is making an LED turn on for a second and turn off for a second repeatedly. 
 Pin 13 is set as the LED pin. 
 */
