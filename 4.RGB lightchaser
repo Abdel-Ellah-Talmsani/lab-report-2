@@ -1,0 +1,37 @@
+/*The objective of this program is making the RGB turn on in this order: red light turns on then off,
+then green light turns on then off, then blue light turns on then off,then RGB turn on white because
+all the lights will turn on at the same time then off and then this process will repeat.
+*/
+int waiting = 5000; //setting an integer so where ever "waiting"is seen will see it as 5seconds
+void setup() {
+  // set pins as outputs
+  pinMode(13, OUTPUT);
+  pinMode(12, OUTPUT);
+  pinMode(11, OUTPUT);
+}
+
+void loop()
+{
+  digitalWrite(13, HIGH);   // RED light turns on
+  delay(waiting);           // Wait for 1000 millisecond(s)
+  digitalWrite(13, LOW);    //RED light turns off
+  delay(waiting);           // Wait for 1000 millisecond(s)
+   digitalWrite(12, HIGH);  // GREEN light turns on
+  delay(waiting);           // Wait for 1000 millisecond(s)
+  digitalWrite(12, LOW);    //GREEN light turns off
+  delay(waiting);           // Wait for 1000 millisecond(s)
+   digitalWrite(11, HIGH);  // BLUE light turns on
+  delay(waiting);           // Wait for 1000 millisecond(s)
+  digitalWrite(11, LOW);    //BLUE light turns off
+  delay(waiting);           // Wait for 1000 millisecond(s)
+  //All three lights turn on at the same time
+  digitalWrite(11, HIGH);
+  digitalWrite(12, HIGH);
+  digitalWrite(13, HIGH);
+   delay(waiting);          // Wait for 1000 millisecond(s)
+  //ALL three lights turn off at the same time
+  digitalWrite(11, LOW);
+  digitalWrite(12, LOW);
+  digitalWrite(13, LOW);
+  delay(waiting); // Wait for 1000 millisecond(s)
+}
