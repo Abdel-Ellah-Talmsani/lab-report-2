@@ -1,0 +1,25 @@
+/* the objective of this program is to display on the serial monitor the input value. If the switch 
+ *  is open, the input is 0, if the switch is closed, the input is 1.
+ */
+void setup() {
+  // put your setup code here, to run once:
+  // start serial connection
+Serial.begin(9600);
+//Configure pin 2 as an input and enable the internal pull-up resistor
+pinMode(2,INPUT_PULL_DOWN);
+pinMode(13,OUTPUT);
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+//Read the pushButton value into a variable 
+int sensorVal=digitalRead(2);
+//print out the value of the pushButton 
+Serial.println(sensorVal);
+// The pushButton's logic is inverted, if HIGH then it's open, if Low then it's closed
+if (sensorVal =HIGH){
+  digitalWrite(13, LOW);
+} else {
+  digitalWrite(13,HIGH);
+}
+}
