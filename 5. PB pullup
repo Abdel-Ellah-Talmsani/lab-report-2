@@ -1,0 +1,21 @@
+/* The objective of this program is to monitor the state of the switch. 
+ *  there will be a steam of 0 if the switch is open or a stream of 1 
+ *  if the switch is closed, on the serial monitor. 
+ */
+int pushButton= 2; 
+void setup() {
+  // put your setup code here, to run once:
+// initialize serial communication at 9600 bits per second
+Serial.begin(9600);
+// Make the pushButton's pin an input  
+pinMode(pushButton, INPUT);
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+//Read the input pin
+int ButtonState=digitalRead(pushButton);
+//print out the state of the button 
+Serial.println(ButtonState); 
+delay(1); // delay in between reads for stability
+}
