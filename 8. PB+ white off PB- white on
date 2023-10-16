@@ -1,0 +1,27 @@
+/*The objective of the program is turning RGB white when PB- and 
+turning it off when PB+*/
+
+int sensor;
+
+void setup() {
+pinMode(3,INPUT_PULLUP);  //set pin 2 as input using internal resistor:
+pinMode(13, OUTPUT);// set red LED on pin 7 as an output:
+pinMode(12, OUTPUT);// set green LED on pin 6 as an output:
+pinMode(11, OUTPUT);// set blue LED on pin 5 as an ouput:
+}
+
+void loop() {
+  // if the PB is not pressed the following will happen;
+if(!sensor) { 
+  digitalWrite(13, HIGH);// red LED is on
+  digitalWrite(12, HIGH);// green LED is on
+digitalWrite(11, HIGH);// blue LED is on
+}
+// if the PB is pressed the following will happen;
+if(sensor) {
+  digitalWrite(13, LOW);// red LED is off:
+  digitalWrite(12, LOW);//green LED is off:
+digitalWrite(11, LOW);// blue LED is off:
+}
+
+}
